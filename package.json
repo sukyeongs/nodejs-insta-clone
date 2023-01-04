@@ -1,0 +1,36 @@
+{
+  "name": "nodejs-insta-clone",
+  "version": "1.0.0",
+  "description": "Cloning instagram with node.js",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sukyeongs/nodejs-insta-clone.git"
+  },
+  "keywords": [
+    "clone",
+    "instagram"
+  ],
+  "author": "sukyeongs",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sukyeongs/nodejs-insta-clone/issues"
+  },
+  "homepage": "https://github.com/sukyeongs/nodejs-insta-clone#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.1",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "http-errors": "^2.0.0",
+    "mongoose": "^6.8.2",
+    "morgan": "^1.10.0"
+  }
+}
