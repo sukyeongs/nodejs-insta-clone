@@ -30,11 +30,36 @@ exports.create = (req, res) => {
     });
 };
 
+// Get User information
 exports.findAll = (req, res) => {
     User.find()
     .then(users => {
         res.send(users);
     }).catch(err => {
+        res.status(500).send({
+            message: err.message
+        });
+    });
+};
+
+// Delete User information
+exports.deleteById = (req, res) => {
+    const user_id = req.body.user_id;
+    User.findByIdAndDelete(user_id)
+    .then(res.send("Delete User"))
+    .catch(err => {
+        res.status(500).send({
+            message: err.message
+        });
+    });
+};
+
+// Update User email
+exports.updateEmail = (req, res) => {
+    //const { user_id, username } = req.body;
+    User.findByIdAndUpdate(req.body.user_id, {username : req.body.username})
+    .then(res.send("Update username"))
+    .catch(err => {
         res.status(500).send({
             message: err.message
         });
