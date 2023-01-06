@@ -29,6 +29,4 @@ const userSchema = mongoose.Schema({
     }
 })
 
-// DB에 모델 정의
-const User = mongoose.model('User', userSchema)
-module.exports = User
+module.exports = mongoose.model('User', userSchema);
